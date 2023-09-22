@@ -1,14 +1,15 @@
 'use client';
 
+import { Icon } from '@/Icon/Icon';
 import { useLoading } from '@/context/LoadingContext';
 import Link from 'next/link';
 import React from 'react';
-import Loading from '../Loading/Loading';
+import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 
 const Navbar = () => {
     const [isSticky, setSticky] = React.useState(false);
-    const [theme, setTheme] = React.useState('');
-    const { loading, setLoading } = useLoading();
+    // const [theme, setTheme] = React.useState('');
+    const { loading, setLoading, theme, setTheme } = useLoading();
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -38,40 +39,59 @@ const Navbar = () => {
     };
 
     if (loading) {
-        return <Loading />;
+        return null;
     }
 
     return (
         <nav
-            className={`${theme} border sticky top-0 transition-all z-50 ${
-                isSticky ? 'bg-gray-600/20' : 'bg-transparent'
+            className={`${theme} fixed top-0 left-0 right-0 transition-all duration-500 z-40 ${
+                isSticky ? 'bg-black/50' : 'bg-transparent'
             }`}
         >
-            <div className="max-w-screen-xl mx-auto border">
-                <div className="mx-5 flex justify-between items-center">
-                    <div className="bg-red-400 dark:bg-green-400">Hello</div>
-                    <div className="flex items-center gap-2 py-5">
-                        <Link href="/">
-                            <span className="text-lg font-semibold py-1 px-2">home</span>
-                        </Link>
-                        <Link href="/">
-                            <span className="text-lg font-semibold py-1 px-2">About Me</span>
-                        </Link>
-                        <Link href="/">
-                            <span className="text-lg font-semibold py-1 px-2">Skills</span>
-                        </Link>
-                        <Link href="/">
-                            <span className="text-lg font-semibold py-1 px-2">Projects</span>
-                        </Link>
-                        <Link href="/">
-                            <span className="text-lg font-semibold py-1 px-2">Contact Me</span>
-                        </Link>
-                        <span onClick={handleTheme} className="text-lg font-semibold py-1 px-2 cursor-pointer">
-                            Dark/Light
-                        </span>
-                    </div>
+            <ContainerLayout>
+                <div className="text-5xl py-4 font-bold">
+                    <span className="text-white">J</span>
+                    <span className="text-[#fec544]">O</span>
+                    <span className="text-white">Y</span>
                 </div>
-            </div>
+                <div className="flex items-center gap-4 py-5">
+                    <Link href="/">
+                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">HOME</span>
+                    </Link>
+                    <Link href="/">
+                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                            ABOUT ME
+                        </span>
+                    </Link>
+                    <Link href="/">
+                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                            SKILLS
+                        </span>
+                    </Link>
+                    <Link href="/">
+                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                            PROJECTS
+                        </span>
+                    </Link>
+                    <Link href="/">
+                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                            CONTACT
+                        </span>
+                    </Link>
+                </div>
+                <div className="flex items-center gap-3">
+                    <button className="text-[15px] font-medium text-white py-2 px-5 bg-[#fec544] dark:bg-red-500 outline-none rounded-full">
+                        HIRE ME
+                    </button>
+                    <span onClick={handleTheme} className="text-base text-white px-2 cursor-pointer">
+                        {theme === 'dark' ? (
+                            <Icon icon="light" className="h-7 w-7 fill-[#fec544]" />
+                        ) : (
+                            <Icon icon="dark" className="h-7 w-7 fill-[#fec544]" />
+                        )}
+                    </span>
+                </div>
+            </ContainerLayout>
         </nav>
     );
 };
