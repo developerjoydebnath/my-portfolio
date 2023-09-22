@@ -5,7 +5,7 @@ import React from 'react';
 
 const Navbar = () => {
     const [isSticky, setSticky] = React.useState(false);
-    const [theme, setTheme] = React.useState(localStorage.getItem('theme') || 'light');
+    const [theme, setTheme] = React.useState('');
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -17,7 +17,7 @@ const Navbar = () => {
     };
 
     React.useEffect(() => {
-        // setTheme();
+        setTheme(localStorage.getItem('theme') || 'light');
         handleScroll();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
