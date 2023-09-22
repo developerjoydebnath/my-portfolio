@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar/Navbar';
+import { LoadingProvider } from '@/context/LoadingContext';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -13,8 +14,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Navbar />
-                {children}
+                <LoadingProvider>
+                    <Navbar />
+                    {children}
+                </LoadingProvider>
             </body>
         </html>
     );

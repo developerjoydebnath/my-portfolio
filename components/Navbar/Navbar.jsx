@@ -1,11 +1,14 @@
 'use client';
 
+import { useLoading } from '@/context/LoadingContext';
 import Link from 'next/link';
 import React from 'react';
+import Loading from '../Loading/Loading';
 
 const Navbar = () => {
     const [isSticky, setSticky] = React.useState(false);
     const [theme, setTheme] = React.useState('');
+    const { loading, setLoading } = useLoading();
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -18,6 +21,7 @@ const Navbar = () => {
 
     React.useEffect(() => {
         setTheme(localStorage.getItem('theme') || 'light');
+        setLoading(false);
         handleScroll();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -32,6 +36,10 @@ const Navbar = () => {
             localStorage.setItem('theme', 'light');
         }
     };
+
+    if (loading) {
+        return <Loading />;
+    }
 
     return (
         <nav
