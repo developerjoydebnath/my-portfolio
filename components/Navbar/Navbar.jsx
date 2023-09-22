@@ -17,6 +17,7 @@ const Navbar = () => {
     };
 
     React.useEffect(() => {
+        // setTheme();
         handleScroll();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -33,7 +34,11 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`border sticky top-0 transition-all z-50 ${isSticky ? 'bg-gray-600/20' : 'bg-transparent'}`}>
+        <nav
+            className={`${theme} border sticky top-0 transition-all z-50 ${
+                isSticky ? 'bg-gray-600/20' : 'bg-transparent'
+            }`}
+        >
             <div className="max-w-screen-xl mx-auto border">
                 <div className="mx-5 flex justify-between items-center">
                     <div className="bg-red-400 dark:bg-green-400">Hello</div>
