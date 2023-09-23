@@ -24,3 +24,16 @@
         }
         
 }
+
+.neon:hover .js__shadow {
+  transition-duration: 200ms;
+  /* text-shadow: 0 0 40px #ffe600; */
+  color: #fec544;
+}
+
+.neon:hover .js__shadow_2 {
+  box-shadow: 0 0 50px 5px rgba(231, 228, 47, 0.863);
+  transition-duration: 200ms;
+  background: #fec544;
+  border: #fec544;
+}

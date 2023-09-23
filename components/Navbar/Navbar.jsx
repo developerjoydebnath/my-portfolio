@@ -48,7 +48,7 @@ const Navbar = () => {
                 isSticky ? 'bg-black/50' : 'bg-transparent'
             }`}
         >
-            <ContainerLayout>
+            <ContainerLayout extraClasses="flex justify-between items-center">
                 <div className="text-5xl py-4 font-bold">
                     <span className="text-white">J</span>
                     <span className="text-[#fec544]">O</span>

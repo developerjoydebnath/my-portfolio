@@ -1,4 +1,4 @@
-const Heading = ({ children, className = '' }) => {
+const Heading = ({ children, className = '', left = '' }) => {
     return (
         <div className="max-w-screen-xl mx-auto py-10">
             <div className={`mx-5 text-center relative ${className}`}>
@@ -6,7 +6,7 @@ const Heading = ({ children, className = '' }) => {
                 <span className="text-2xl font-medium text-[#fec544] relative">
                     {children}
                     <span className="absolute h-0.5 w-full bg-gray-600 top-full mt-4 left-0 rounded-full">
-                        <span className="h-0.5 w-[50%] bg-[#fec544] absolute top-0 left-8 rounded-full"></span>
+                        <span className={`h-0.5 w-[50%] bg-[#fec544] absolute top-0 ${left} rounded-full`}></span>
                     </span>
                 </span>
             </div>

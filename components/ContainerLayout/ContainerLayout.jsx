@@ -1,7 +1,7 @@
-export const ContainerLayout = ({ children }) => {
+export const ContainerLayout = ({ children, extraClasses = '' }) => {
     return (
         <div className="max-w-screen-xl mx-auto">
-            <div className="mx-5 flex justify-between items-center">{children}</div>
+            <div className={`mx-5 w-full ${extraClasses}`}>{children}</div>
         </div>
     );
 };

@@ -10,8 +10,8 @@ const AboutMe = () => {
     console.log(theme);
     return (
         <section className={`${theme} `}>
-            <div className="dark:bg-[#0a101e] transition-all bg-white py-10">
-                <Heading>ABOUT ME</Heading>
+            <div className="py-10">
+                <Heading left="left-8">ABOUT ME</Heading>
                 <ContainerLayout>
                     <div className="grid grid-cols-12 mt-10">
                         <div className="col-span-6 flex justify-center items-center">
