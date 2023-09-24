@@ -1,6 +1,6 @@
 const Heading = ({ children, className = '', left = '' }) => {
     return (
-        <div className="max-w-screen-xl mx-auto py-10">
+        <div className="max-w-screen-xl mx-auto py-10 cursor-default">
             <div className={`mx-5 text-center relative ${className}`}>
                 <span className="absolute block text-8xl -top-5 text-gray-600/10  -inset-1 font-bold">{children}</span>
                 <span className="text-2xl font-medium text-[#fec544] relative">
