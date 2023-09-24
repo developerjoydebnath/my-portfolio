@@ -25,6 +25,24 @@
         
 }
 
+/* width */
+::-webkit-scrollbar {
+  /* width: 10px; */
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0a101e;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebb129; 
+  border-radius: 10px;
+}
+
+
 .neon:hover .js__shadow {
   transition-duration: 200ms;
   /* text-shadow: 0 0 40px #ffe600; */

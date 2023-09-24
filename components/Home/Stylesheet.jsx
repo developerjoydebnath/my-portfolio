@@ -45,7 +45,7 @@ const Stylesheet = () => {
                         className="h-10 w-10 group-hover:fill-[#fec544] transition duration-300 fill-[#a9adb8]"
                     />
                 </span>
-                <h1 className="text-4xl font-light transition duration-300 group-hover:text-[#fec544] cursor-default">
+                <h1 className="text-4xl transition duration-300 group-hover:text-[#fec544] cursor-default">
                     STYLESHEET
                 </h1>
             </div>

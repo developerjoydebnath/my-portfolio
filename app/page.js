@@ -2,7 +2,9 @@
 
 import AboutMe from '@/components/Home/AboutMe';
 import Banner from '@/components/Home/Banner';
+import Modal from '@/components/Home/Modal';
 import MySkills from '@/components/Home/MySkills';
+import Portfolios from '@/components/Home/Portfolios';
 import Loading from '@/components/Loading/Loading';
 import { useLoading } from '@/context/LoadingContext';
 
@@ -18,6 +20,8 @@ export default function Home() {
             <div className="dark:bg-[#0a101e] transition-all bg-white">
                 <AboutMe />
                 <MySkills />
+                <Portfolios />
+                <Modal />
             </div>
         </main>
     );

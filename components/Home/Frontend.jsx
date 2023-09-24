@@ -47,9 +47,7 @@ const Frontend = () => {
                         className="h-10 w-10 group-hover:fill-[#fec544] transition duration-300 fill-[#a9adb8]"
                     />
                 </span>
-                <h1 className="text-4xl font-light transition duration-300 group-hover:text-[#fec544] cursor-default">
-                    FRONTEND
-                </h1>
+                <h1 className="text-4xl transition duration-300 group-hover:text-[#fec544] cursor-default">FRONTEND</h1>
             </div>
             <div className="border-l-[0.5px] ms-5 border-[#232935]">
                 {frontend.map((d, index) => (
