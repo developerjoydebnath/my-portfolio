@@ -14,7 +14,7 @@ const ContactDetails = () => {
             <div className="mb-10">
                 <div className="flex items-center gap-4 mb-5 group">
                     <div className="">
-                        <div className="border-2 border-[#5c667e] group-hover:border-[#fec544] transition duration-200 p-4 rounded-full">
+                        <div className="border-2 border-[#5c667e] group-hover:border-[#ffbf2a] transition duration-200 p-4 rounded-full">
                             <Icon icon="email" className="h-6 w-6 fill-[#5c667e]" />
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const ContactDetails = () => {
                 </div>
                 <div className="flex items-center gap-4 mb-5 group">
                     <div className="">
-                        <div className="border-2 border-[#5c667e] group-hover:border-[#fec544] transition duration-200 p-4 rounded-full">
+                        <div className="border-2 border-[#5c667e] group-hover:border-[#ffbf2a] transition duration-200 p-4 rounded-full">
                             <Icon icon="phone" className="h-6 w-6 fill-[#5c667e]" />
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const ContactDetails = () => {
                 </div>
                 <div className="flex items-center gap-4 mb-5 group">
                     <div className="">
-                        <div className="border-2 border-[#5c667e] group-hover:border-[#fec544] transition duration-200 p-4 rounded-full">
+                        <div className="border-2 border-[#5c667e] group-hover:border-[#ffbf2a] transition duration-200 p-4 rounded-full">
                             <Icon icon="location" className="h-6 w-6 fill-[#5c667e]" />
                         </div>
                     </div>

@@ -43,17 +43,29 @@
 }
 
 
-.neon:hover .js__shadow {
+.neon:hover .js__shadow_dark {
   transition-duration: 200ms;
   /* text-shadow: 0 0 40px #ffe600; */
-  color: #fec544;
+  color: #ffbf2a;
+}
+
+.neon:hover .js__shadow {
+  transition-duration: 200ms;
+  color: #22c55e;
+}
+
+.neon:hover .js__shadow_2_dark {
+  box-shadow: 0 0 50px 5px rgba(230, 227, 41, 0.986);
+  transition-duration: 200ms;
+  background: #ffbf2a;
+  border: #ffbf2a;
 }
 
 .neon:hover .js__shadow_2 {
-  box-shadow: 0 0 50px 5px rgba(231, 228, 47, 0.863);
+  box-shadow: 0 0 50px 10px rgb(81, 223, 39);
   transition-duration: 200ms;
-  background: #fec544;
-  border: #fec544;
+  background: #22c55e;
+  border: #22c55e;
 }
 
 .js__transition{

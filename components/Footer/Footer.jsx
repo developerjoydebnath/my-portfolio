@@ -5,7 +5,7 @@ import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 const Footer = () => {
     return (
         <footer>
-            {/* bg-[#fec544] */}
+            {/* bg-[#ffbf2a] */}
             <div className="bg-[#06112e] py-8">
                 <ContainerLayout>
                     <div className="flex justify-between">

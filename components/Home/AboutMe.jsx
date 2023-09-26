@@ -15,7 +15,7 @@ const AboutMe = () => {
                 <ContainerLayout>
                     <div className="grid grid-cols-12 mt-10">
                         <div className="col-span-6 flex justify-center items-center">
-                            <div className="h-[500px] w-[400px] overflow-hidden bg-[#fec544] rounded-full js__animation">
+                            <div className="h-[500px] w-[400px] overflow-hidden dark:bg-[#ffbf2a] bg-green-500 rounded-full js__animation">
                                 <Image
                                     src="/img/myself.png"
                                     className="h-full w-full"
@@ -27,15 +27,19 @@ const AboutMe = () => {
                         </div>
                         <div className="col-span-6">
                             <div>
-                                <h1 className="text-4xl font-normal text-white mb-5">Hi There! I'm Joy Debnath</h1>
-                                <h3 className="text-2xl font-light mb-6 text-[#fec544]">A frontend web developer</h3>
-                                <p className="leading-6 text-[#a9adb8] mb-6">
+                                <h1 className="text-4xl dark:font-normal font-semibold dark:text-white text-slate-600 mb-5">
+                                    Hi There! I'm Joy Debnath
+                                </h1>
+                                <h3 className="text-2xl dark:font-light mb-6 dark:text-[#ffbf2a] text-green-500 font-semibold">
+                                    A frontend web developer
+                                </h3>
+                                <p className="leading-6 dark:text-[#a9adb8] text-slate-500 mb-6">
                                     I am a Visual Designer with a strong focus on digital branding. Visul design seeks
                                     to attract, inspire, create desires and otivate people to respond to messages, with
                                     a view to making a favorable impact.
                                 </p>
                                 <table>
-                                    <tbody className="text-[#a9adb8]">
+                                    <tbody className="dark:text-[#a9adb8] text-slate-500">
                                         <tr>
                                             <td className="pb-4">Birthday</td>
                                             <td className="pb-4 ps-5">: May 07, 1990</td>
@@ -62,7 +66,9 @@ const AboutMe = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button className="bg-[#fec544] px-8 py-3 font-medium rounded-full">Download CV</button>
+                                <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 font-medium rounded-full hover:-translate-y-0.5">
+                                    Download CV
+                                </button>
                             </div>
                         </div>
                     </div>

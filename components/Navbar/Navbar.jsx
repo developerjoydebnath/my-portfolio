@@ -45,49 +45,49 @@ const Navbar = () => {
     return (
         <nav
             className={`${theme} fixed top-0 left-0 right-0 transition-all duration-500 z-40 ${
-                isSticky ? 'bg-black/50' : 'bg-transparent'
+                isSticky ? 'bg-black/80' : 'bg-transparent'
             }`}
         >
             <ContainerLayout extraClasses="flex justify-between items-center">
                 <div className="text-5xl py-4 font-bold">
                     <span className="text-white">J</span>
-                    <span className="text-[#fec544]">O</span>
+                    <span className="dark:text-[#ffbf2a] text-green-500">O</span>
                     <span className="text-white">Y</span>
                 </div>
                 <div className="flex items-center gap-4 py-5">
                     <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">HOME</span>
+                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">HOME</span>
                     </Link>
                     <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
                             ABOUT ME
                         </span>
                     </Link>
                     <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
                             SKILLS
                         </span>
                     </Link>
                     <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
                             PROJECTS
                         </span>
                     </Link>
                     <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#fec544] text-white py-1 px-2">
+                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
                             CONTACT
                         </span>
                     </Link>
                 </div>
                 <div className="flex items-center gap-3">
-                    <button className="text-[15px] font-medium text-white py-2 px-5 bg-[#fec544] dark:bg-red-500 outline-none rounded-full">
+                    <button className="text-[15px] font-medium text-white  py-2 px-5 dark:bg-[#ffbf2a] bg-green-500 outline-none rounded-full">
                         HIRE ME
                     </button>
                     <span onClick={handleTheme} className="text-base text-white px-2 cursor-pointer">
                         {theme === 'dark' ? (
-                            <Icon icon="light" className="h-7 w-7 fill-[#fec544]" />
+                            <Icon icon="light" className="h-9 w-9 bg-[#ffbf2a] rounded-full p-1.5 fill-white" />
                         ) : (
-                            <Icon icon="dark" className="h-7 w-7 fill-[#fec544]" />
+                            <Icon icon="dark" className="h-9 w-9 bg-green-500  rounded-full p-1.5 fill-white" />
                         )}
                     </span>
                 </div>

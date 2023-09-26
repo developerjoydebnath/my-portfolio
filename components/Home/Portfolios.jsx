@@ -65,7 +65,7 @@ const Portfolios = () => {
                                                     </h1>
                                                     <button
                                                         onClick={() => setIsOpen(true)}
-                                                        className="px-3 py-1 mt-3 rounded text-base font-semibold bg-[#fec544]"
+                                                        className="px-3 py-1 mt-3 rounded text-base font-semibold bg-[#ffbf2a]"
                                                     >
                                                         Details
                                                     </button>

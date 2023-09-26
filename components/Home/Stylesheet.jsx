@@ -33,28 +33,40 @@ const Stylesheet = () => {
         },
     ];
 
-    const style =
-        'absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#232935] overflow-hidden bg-[#131313] -hover:border-[#fec544] -hover:bg-[#fec544] js__shadow_2';
-
     return (
         <div className="col-span-4 text-white group">
             <div className="flex items-center gap-5 mb-10">
                 <span>
                     <Icon
                         icon="css"
-                        className="h-10 w-10 group-hover:fill-[#fec544] transition duration-300 fill-[#a9adb8]"
+                        className="h-10 w-10 dark:group-hover:fill-[#ffbf2a] group-hover:fill-green-500 transition duration-300 dark:fill-[#a9adb8] fill-[#8f9299]"
                     />
                 </span>
-                <h1 className="text-4xl transition duration-300 group-hover:text-[#fec544] cursor-default">
+                <h1 className="text-4xl dark:text-[#e6e5e5] text-slate-600 transition duration-300 dark:group-hover:text-[#ffbf2a] group-hover:text-green-500 dark:font-normal font-medium cursor-default">
                     STYLESHEET
                 </h1>
             </div>
-            <div className="border-l-[0.5px] ms-5 border-[#232935]">
+            <div className="border-l-[0.5px] ms-5 border-[#ddd] dark:border-[#232935]">
                 {frontend.map((d, index) => (
                     <h4 key={index} className="ms-10 me-5 pb-10 relative cursor-pointer neon">
-                        <span className="js__shadow hover text-xl text-[#a9adb8] font-bold flex items-center gap-3">
-                            <Image src={d.img} alt={d.topic} className="h-6 w-6 js__shadow" width={60} height={60} />
-                            <span>{d.topic}</span> <span className={style}></span>
+                        <span
+                            className={`${
+                                theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
+                            } hover text-xl text-[#a9adb8] font-bold flex items-center gap-3`}
+                        >
+                            <Image
+                                src={d.img}
+                                alt={d.topic}
+                                className={`h-6 w-6 ${theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'}`}
+                                width={60}
+                                height={60}
+                            />
+                            <span>{d.topic}</span>{' '}
+                            <span
+                                className={`absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#ddd] dark:border-[#232935] overflow-hidden dark:bg-[#131313] bg-white ${
+                                    theme === 'dark' ? 'js__shadow_2_dark' : 'js__shadow_2'
+                                } `}
+                            ></span>
                         </span>
                         <p className="ms-10 mt-2 text-[#a9adb8]">{d.desc}</p>
                     </h4>

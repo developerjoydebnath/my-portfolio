@@ -30,7 +30,7 @@ const Backend = () => {
     ];
 
     const style =
-        'absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#232935] overflow-hidden bg-[#131313] -hover:border-[#fec544] -hover:bg-[#fec544] js__shadow_2';
+        'absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#232935] overflow-hidden bg-[#131313] -hover:border-[#ffbf2a] -hover:bg-[#ffbf2a] js__shadow_2';
 
     return (
         <div className="col-span-4 text-white group">
@@ -38,10 +38,12 @@ const Backend = () => {
                 <span>
                     <Icon
                         icon="database"
-                        className="h-10 w-10 group-hover:fill-[#fec544] transition duration-300 fill-[#a9adb8]"
+                        className="h-10 w-10 dark:group-hover:fill-[#ffbf2a] group-hover:fill-green-500 transition duration-300 dark:fill-[#a9adb8] fill-[#8f9299]"
                     />
                 </span>
-                <h1 className="text-4xl transition duration-300 group-hover:text-[#fec544] cursor-default">BACKEND</h1>
+                <h1 className="text-4xl dark:text-[#e6e5e5] text-slate-600 transition duration-300 dark:group-hover:text-[#ffbf2a] group-hover:text-green-500 dark:font-normal font-medium cursor-default">
+                    BACKEND
+                </h1>
             </div>
             <div className="border-l-[0.5px] ms-5 border-[#232935]">
                 {frontend.map((d, index) => (

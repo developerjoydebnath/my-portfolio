@@ -30,6 +30,6 @@ export default function Home() {
 }
 
 // bg color #0a101e
-// yellow color #fec544
+// yellow color #ffbf2a
 // text dim #a9adb8
 // dim bg #232935

@@ -13,7 +13,7 @@ const Banner = () => {
                     <div className="text-center">
                         <h1 className="text-6xl font-semibold text-white mb-8 flex items-center justify-center gap-5">
                             Hi, I'm{' '}
-                            <span className="text-[#fec544]">
+                            <span className="dark:text-[#ffbf2a] text-green-500">
                                 {/* <Typewriter
                                     options={{
                                         strings: ['Joy Debnath', 'A Frontend Web Developer'],

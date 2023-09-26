@@ -40,7 +40,7 @@ const ContactForm = () => {
                     </div>
                     <div className="w-full">
                         <input
-                            className="w-[165px] text-[#000000] bg-[#fec544] cursor-pointer transition duration-300 hover:-translate-y-0.5 outline-none focus:border-[#4c586e] rounded-full px-5 py-3 mb-6 font-medium"
+                            className="w-[165px] text-[#000000] bg-[#ffbf2a] cursor-pointer transition duration-300 hover:-translate-y-0.5 outline-none focus:border-[#4c586e] rounded-full px-5 py-3 mb-6 font-medium"
                             placeholder="Your Subject"
                             type="submit"
                             value="Send Message"
