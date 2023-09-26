@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/Footer/Footer';
 import AboutMe from '@/components/Home/AboutMe';
 import Banner from '@/components/Home/Banner';
 import ContactMe from '@/components/Home/ContactMe';
@@ -22,6 +23,7 @@ export default function Home() {
                 <MySkills />
                 <Portfolios />
                 <ContactMe />
+                <Footer />
             </div>
         </main>
     );

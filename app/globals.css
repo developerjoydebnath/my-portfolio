@@ -55,3 +55,17 @@
   background: #fec544;
   border: #fec544;
 }
+
+.js__transition{
+  display: flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  transition: width 500ms ease-in-out;
+  overflow: hidden;
+}
+
+.js__transition:hover{
+  width: 150px;
+}

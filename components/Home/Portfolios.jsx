@@ -40,7 +40,7 @@ const Portfolios = () => {
     return (
         <section>
             <div className="py-10">
-                <Heading left="left-12">MY PORTFOLIOS</Heading>
+                <Heading left="left-[42px]">MY PROJECTS</Heading>
                 <ContainerLayout>
                     <div>
                         <div className="grid grid-cols-12 gap-10 mt-10">
