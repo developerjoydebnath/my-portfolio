@@ -35,8 +35,8 @@ export default function Modal({ isOpen = false, closeModal }) {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            Your payment has been successfully submitted. We’ve sent you an email with
-                                            all of the details of your order.
+                                            Your payment has been successfully submitted. We sent you an email with all
+                                            of the details of your order.
                                         </p>
                                     </div>
 

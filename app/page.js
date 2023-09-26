@@ -2,7 +2,7 @@
 
 import AboutMe from '@/components/Home/AboutMe';
 import Banner from '@/components/Home/Banner';
-import Modal from '@/components/Home/Modal';
+import ContactMe from '@/components/Home/ContactMe';
 import MySkills from '@/components/Home/MySkills';
 import Portfolios from '@/components/Home/Portfolios';
 import Loading from '@/components/Loading/Loading';
@@ -21,7 +21,7 @@ export default function Home() {
                 <AboutMe />
                 <MySkills />
                 <Portfolios />
-                <Modal />
+                <ContactMe />
             </div>
         </main>
     );
@@ -30,3 +30,4 @@ export default function Home() {
 // bg color #0a101e
 // yellow color #fec544
 // text dim #a9adb8
+// dim bg #232935
