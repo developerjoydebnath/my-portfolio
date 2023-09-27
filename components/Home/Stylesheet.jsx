@@ -52,7 +52,7 @@ const Stylesheet = () => {
                         <span
                             className={`${
                                 theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
-                            } hover text-xl text-[#a9adb8] font-bold flex items-center gap-3`}
+                            } hover text-xl text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
                         >
                             <Image
                                 src={d.img}
@@ -68,7 +68,7 @@ const Stylesheet = () => {
                                 } `}
                             ></span>
                         </span>
-                        <p className="ms-10 mt-2 text-[#a9adb8]">{d.desc}</p>
+                        <p className="ms-10 mt-2 text-slate-500 dark:text-[#a9adb8]">{d.desc}</p>
                     </h4>
                 ))}
             </div>

@@ -7,7 +7,7 @@ import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 
 const Banner = () => {
     return (
-        <section className="js__home_container h-screen">
+        <section id="home" className="js__home_container h-screen">
             <div className="h-full w-full flex justify-center items-center">
                 <ContainerLayout>
                     <div className="text-center">

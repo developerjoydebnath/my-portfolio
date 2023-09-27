@@ -4,7 +4,7 @@ import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 import Heading from '../Heading/Heading';
 import Modal from './Modal';
 
-const Portfolios = () => {
+const Projects = () => {
     let [isOpen, setIsOpen] = React.useState(false);
 
     function closeModal() {
@@ -38,7 +38,7 @@ const Portfolios = () => {
         },
     ];
     return (
-        <section>
+        <section id="projects">
             <div className="py-10">
                 <Heading left="left-[42px]">MY PROJECTS</Heading>
                 <ContainerLayout>
@@ -65,7 +65,7 @@ const Portfolios = () => {
                                                     </h1>
                                                     <button
                                                         onClick={() => setIsOpen(true)}
-                                                        className="px-3 py-1 mt-3 rounded text-base font-semibold bg-[#ffbf2a]"
+                                                        className="px-3 py-1 mt-3 rounded text-base font-semibold bg-green-500 text-white dark:bg-[#ffbf2a]"
                                                     >
                                                         Details
                                                     </button>
@@ -84,4 +84,4 @@ const Portfolios = () => {
     );
 };
 
-export default Portfolios;
+export default Projects;

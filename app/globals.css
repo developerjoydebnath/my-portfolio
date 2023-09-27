@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .js__home_container{
     background-image: url('/img/banner.jpg');
     background-repeat: no-repeat;
@@ -62,7 +66,7 @@
 }
 
 .neon:hover .js__shadow_2 {
-  box-shadow: 0 0 50px 10px rgb(81, 223, 39);
+  box-shadow: 0 0 50px 10px rgba(82, 223, 39, 0.97);
   transition-duration: 200ms;
   background: #22c55e;
   border: #22c55e;
@@ -79,5 +83,5 @@
 }
 
 .js__transition:hover{
-  width: 150px;
+  width: 140px;
 }

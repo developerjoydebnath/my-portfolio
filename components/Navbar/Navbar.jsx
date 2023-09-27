@@ -8,8 +8,8 @@ import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 
 const Navbar = () => {
     const [isSticky, setSticky] = React.useState(false);
-    // const [theme, setTheme] = React.useState('');
     const { loading, setLoading, theme, setTheme } = useLoading();
+    const [currentSection, setCurrentSection] = React.useState(null);
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -21,7 +21,28 @@ const Navbar = () => {
     };
 
     React.useEffect(() => {
-        setTheme(localStorage.getItem('theme') || 'light');
+        const handlingScroll = () => {
+            const sections = document.querySelectorAll('section');
+            let currentSection = null;
+
+            sections.forEach((section) => {
+                if (window.scrollY >= section.offsetTop - 200) {
+                    currentSection = section.id;
+                }
+            });
+
+            setCurrentSection(currentSection);
+        };
+
+        window.addEventListener('scroll', handlingScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handlingScroll);
+        };
+    }, []);
+
+    React.useEffect(() => {
+        setTheme(localStorage.getItem('theme') || 'dark');
         setLoading(false);
         handleScroll();
         window.addEventListener('scroll', handleScroll);
@@ -49,32 +70,57 @@ const Navbar = () => {
             }`}
         >
             <ContainerLayout extraClasses="flex justify-between items-center">
-                <div className="text-5xl py-4 font-bold">
-                    <span className="text-white">J</span>
-                    <span className="dark:text-[#ffbf2a] text-green-500">O</span>
-                    <span className="text-white">Y</span>
-                </div>
+                <Link href="#home">
+                    <div className="text-5xl my-4 font-bold cursor-pointer ">
+                        <span className="text-white">J</span>
+                        <span className="dark:text-[#ffbf2a] text-green-500">O</span>
+                        <span className="text-white">Y</span>
+                    </div>
+                </Link>
+
                 <div className="flex items-center gap-4 py-5">
-                    <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">HOME</span>
+                    <Link href="#home">
+                        <span
+                            className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-5te py-1 px-2 ${
+                                currentSection === 'home' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                            }`}
+                        >
+                            HOME
+                        </span>
                     </Link>
-                    <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
+                    <Link href="#about-me">
+                        <span
+                            className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 ty-1 px-2 ${
+                                currentSection === 'about-me' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                            }`}
+                        >
                             ABOUT ME
                         </span>
                     </Link>
-                    <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
+                    <Link href="#skills">
+                        <span
+                            className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 py-1 px-2 ${
+                                currentSection === 'skills' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                            }`}
+                        >
                             SKILLS
                         </span>
                     </Link>
-                    <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
+                    <Link href="#projects">
+                        <span
+                            className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 ty-1 px-2 ${
+                                currentSection === 'projects' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                            }`}
+                        >
                             PROJECTS
                         </span>
                     </Link>
-                    <Link href="/">
-                        <span className="text-[15px] font-medium hover:text-[#ffbf2a] text-white py-1 px-2">
+                    <Link href="#contact-me">
+                        <span
+                            className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 tex1 px-2 ${
+                                currentSection === 'contact-me' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                            }`}
+                        >
                             CONTACT
                         </span>
                     </Link>

@@ -6,11 +6,8 @@ import Frontend from './Frontend';
 import Stylesheet from './Stylesheet';
 
 const MySkills = () => {
-    const style =
-        'absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border border-[#5a5a5a] overflow-hidden bg-[#131313] -hover:border-[#ffbf2a] -hover:bg-[#ffbf2a] js__shadow_2';
-
     return (
-        <section>
+        <section id="skills">
             <div className="py-10">
                 <Heading left="left-[31px]">MY SKILLS</Heading>
                 <ContainerLayout>

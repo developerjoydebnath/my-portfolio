@@ -9,7 +9,7 @@ const AboutMe = () => {
     const { theme } = useLoading();
     console.log(theme);
     return (
-        <section className={`${theme} `}>
+        <section id="about-me" className={`${theme} `}>
             <div className="py-10">
                 <Heading left="left-8">ABOUT ME</Heading>
                 <ContainerLayout>
@@ -66,7 +66,7 @@ const AboutMe = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 font-medium rounded-full hover:-translate-y-0.5">
+                                <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5">
                                     Download CV
                                 </button>
                             </div>

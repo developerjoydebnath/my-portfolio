@@ -29,36 +29,42 @@ const Backend = () => {
         },
     ];
 
-    const style =
-        'absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#232935] overflow-hidden bg-[#131313] -hover:border-[#ffbf2a] -hover:bg-[#ffbf2a] js__shadow_2';
-
     return (
         <div className="col-span-4 text-white group">
             <div className="flex items-center gap-5 mb-10">
                 <span>
                     <Icon
-                        icon="database"
+                        icon="html"
                         className="h-10 w-10 dark:group-hover:fill-[#ffbf2a] group-hover:fill-green-500 transition duration-300 dark:fill-[#a9adb8] fill-[#8f9299]"
                     />
                 </span>
                 <h1 className="text-4xl dark:text-[#e6e5e5] text-slate-600 transition duration-300 dark:group-hover:text-[#ffbf2a] group-hover:text-green-500 dark:font-normal font-medium cursor-default">
-                    BACKEND
+                    FRONTEND
                 </h1>
             </div>
-            <div className="border-l-[0.5px] ms-5 border-[#232935]">
+            <div className="border-l-[0.5px] ms-5 border-[#ddd] dark:border-[#232935]">
                 {frontend.map((d, index) => (
                     <h4 key={index} className="ms-10 me-5 pb-10 relative cursor-pointer neon">
-                        <span className="js__shadow hover text-xl text-[#a9adb8] font-bold flex items-center gap-3">
+                        <span
+                            className={`${
+                                theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
+                            } hover text-xl text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
+                        >
                             <Image
-                                src={d.topic === 'Next JS' ? (theme === 'dark' ? d.img : d.img2) : d.img}
+                                src={d.topic === 'Express JS' ? (theme === 'dark' ? d.img : d.img2) : d.img}
                                 alt={d.topic}
-                                className="h-7 w-7 js__shadow"
+                                className={`h-6 w-6 ${theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'}`}
                                 width={60}
                                 height={60}
                             />
-                            <span>{d.topic}</span> <span className={style}></span>
+                            <span>{d.topic}</span>{' '}
+                            <span
+                                className={`absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#ddd] dark:border-[#232935] overflow-hidden dark:bg-[#131313] bg-white ${
+                                    theme === 'dark' ? 'js__shadow_2_dark' : 'js__shadow_2'
+                                } `}
+                            ></span>
                         </span>
-                        <p className="ms-10 mt-2 text-[#a9adb8]">{d.desc}</p>
+                        <p className="ms-10 mt-2 text-slate-500 dark:text-[#a9adb8]">{d.desc}</p>
                     </h4>
                 ))}
             </div>

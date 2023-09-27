@@ -5,7 +5,7 @@ import ContactForm from './ContactForm';
 
 const ContactMe = () => {
     return (
-        <section>
+        <section id="contact-me">
             <div className="py-10">
                 <Heading left="left-10">CONTACT ME</Heading>
                 <ContainerLayout>
