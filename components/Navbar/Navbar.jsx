@@ -71,14 +71,14 @@ const Navbar = () => {
         >
             <ContainerLayout extraClasses="flex justify-between items-center">
                 <Link href="#home">
-                    <div className="text-5xl my-4 font-bold cursor-pointer ">
+                    <div className="md:text-5xl text-4xl my-4 font-bold cursor-pointer ">
                         <span className="text-white">J</span>
                         <span className="dark:text-[#ffbf2a] text-green-500">O</span>
                         <span className="text-white">Y</span>
                     </div>
                 </Link>
 
-                <div className="flex items-center gap-4 py-5">
+                <div className="md:flex items-center gap-4 py-5 hidden">
                     <Link href="#home">
                         <span
                             className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-5te py-1 px-2 ${
@@ -125,16 +125,19 @@ const Navbar = () => {
                         </span>
                     </Link>
                 </div>
-                <div className="flex items-center gap-3">
-                    <button className="text-[15px] font-medium text-white  py-2 px-5 dark:bg-[#ffbf2a] bg-green-500 outline-none rounded-full">
+                <div className="flex items-center">
+                    <button className="text-[15px] font-medium text-white  py-2 px-5 dark:bg-[#ffbf2a] bg-green-500 outline-none rounded-full hidden md:block me-3">
                         HIRE ME
                     </button>
-                    <span onClick={handleTheme} className="text-base text-white px-2 cursor-pointer">
+                    <span onClick={handleTheme} className="text-base text-white md:px-2 md:me-0 me-2 cursor-pointer">
                         {theme === 'dark' ? (
-                            <Icon icon="light" className="h-9 w-9 bg-[#ffbf2a] rounded-full p-1.5 fill-white" />
+                            <Icon icon="light" className="md:h-10 md:w-10 h-9 w-9 rounded-full p-1.5 fill-white" />
                         ) : (
-                            <Icon icon="dark" className="h-9 w-9 bg-green-500  rounded-full p-1.5 fill-white" />
+                            <Icon icon="dark" className="md:h-10 md:w-10 h-9 w-9 rounded-full p-1.5 fill-white" />
                         )}
+                    </span>
+                    <span>
+                        <Icon icon="menu" className="h-6 w-6 fill-white md:hidden" />
                     </span>
                 </div>
             </ContainerLayout>

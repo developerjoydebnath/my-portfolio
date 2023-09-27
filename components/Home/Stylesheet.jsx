@@ -34,41 +34,45 @@ const Stylesheet = () => {
     ];
 
     return (
-        <div className="col-span-4 text-white group">
-            <div className="flex items-center gap-5 mb-10">
+        <div className="md:col-span-4 col-span-12 text-white group md:mb-0 mb-10">
+            <div className="flex items-center gap-5 sm:mb-10 mb-5">
                 <span>
                     <Icon
                         icon="css"
-                        className="h-10 w-10 dark:group-hover:fill-[#ffbf2a] group-hover:fill-green-500 transition duration-300 dark:fill-[#a9adb8] fill-[#8f9299]"
+                        className="lg:h-10 lg:w-10 sm:h-8 sm:w-8 h-6 w-6 dark:group-hover:fill-[#ffbf2a] group-hover:fill-green-500 transition duration-300 dark:fill-[#a9adb8] fill-[#8f9299]"
                     />
                 </span>
-                <h1 className="text-4xl dark:text-[#e6e5e5] text-slate-600 transition duration-300 dark:group-hover:text-[#ffbf2a] group-hover:text-green-500 dark:font-normal font-medium cursor-default">
+                <h1 className="lg:text-4xl sm:text-3xl text-2xl dark:text-[#e6e5e5] text-slate-600 transition duration-300 dark:group-hover:text-[#ffbf2a] group-hover:text-green-500 dark:font-normal font-medium cursor-default">
                     STYLESHEET
                 </h1>
             </div>
-            <div className="border-l-[0.5px] ms-5 border-[#ddd] dark:border-[#232935]">
+            <div className="border-l-[0.5px] sm:ms-5 ms-3 border-[#ddd] dark:border-[#232935]">
                 {frontend.map((d, index) => (
-                    <h4 key={index} className="ms-10 me-5 pb-10 relative cursor-pointer neon">
+                    <h4 key={index} className="sm:ms-10 ms-7 me-5 md:pb-10 sm:pb-5 pb-4 relative cursor-pointer neon">
                         <span
                             className={`${
                                 theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
-                            } hover text-xl text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
+                            } sm:text-xl text-lg text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
                         >
                             <Image
                                 src={d.img}
                                 alt={d.topic}
-                                className={`h-6 w-6 ${theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'}`}
+                                className={`sm:h-6 sm:w-6 h-5 w-5 ${
+                                    theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
+                                }`}
                                 width={60}
                                 height={60}
                             />
                             <span>{d.topic}</span>{' '}
                             <span
-                                className={`absolute h-3 w-3 top-2.5 -left-[46px] transition-all duration-200 rounded-full border-2 border-[#ddd] dark:border-[#232935] overflow-hidden dark:bg-[#131313] bg-white ${
+                                className={`absolute sm:h-3 sm:w-3 h-2.5 w-2.5 top-2.5 sm:-left-[46px] -left-[33.5px] transition-all duration-200 rounded-full border-2 border-[#ddd] dark:border-[#232935] overflow-hidden dark:bg-[#131313] bg-white ${
                                     theme === 'dark' ? 'js__shadow_2_dark' : 'js__shadow_2'
                                 } `}
                             ></span>
                         </span>
-                        <p className="ms-10 mt-2 text-slate-500 dark:text-[#a9adb8]">{d.desc}</p>
+                        <p className="md:ms-10 ms-9 sm:mt-2 mt-1 text-slate-500 sm:text-base text-sm dark:text-[#a9adb8]">
+                            {d.desc}
+                        </p>
                     </h4>
                 ))}
             </div>

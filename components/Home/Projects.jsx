@@ -40,16 +40,16 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className="py-10">
-                <Heading left="left-[42px]">MY PROJECTS</Heading>
+                <Heading left="left-[38px]">MY PROJECTS</Heading>
                 <ContainerLayout>
                     <div>
-                        <div className="grid grid-cols-12 gap-10 mt-10">
+                        <div className="grid grid-cols-12 md:gap-10 gap-y-5 mt-10">
                             {projects.map((d, index) => (
                                 <div
                                     key={index}
-                                    className="col-span-4 rounded-lg overflow-hidden group shadow-xl border dark:border-black"
+                                    className="lg:col-span-4 msm:col-span-6 col-span-12 rounded-lg overflow-hidden group shadow-xl border dark:border-black md:w-full msm:w-[300px] sm:w-[420px] w-[320px] mx-auto"
                                 >
-                                    <div className="h-[250px] w-full relative">
+                                    <div className="md:h-[250px] msm:h-[150px] sm:h-[200px] h-[180px] w-full relative">
                                         <Image
                                             className="h-full w-full group-hover:scale-110 transition duration-500 ease-in-out"
                                             src={d.img}

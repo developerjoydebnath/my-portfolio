@@ -7,10 +7,10 @@ const ContactMe = () => {
     return (
         <section id="contact-me">
             <div className="py-10">
-                <Heading left="left-10">CONTACT ME</Heading>
+                <Heading left="left-9">CONTACT ME</Heading>
                 <ContainerLayout>
                     <div className="mt-10">
-                        <div className="grid grid-cols-2 gap-5">
+                        <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
                             <ContactForm />
                             <ContactDetails />
                         </div>

@@ -59,7 +59,7 @@ html{
 }
 
 .neon:hover .js__shadow_2_dark {
-  box-shadow: 0 0 50px 5px rgba(230, 227, 41, 0.986);
+  box-shadow: 0 0 50px 5px rgb(228, 224, 31);
   transition-duration: 200ms;
   background: #ffbf2a;
   border: #ffbf2a;
