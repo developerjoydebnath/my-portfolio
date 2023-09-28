@@ -75,28 +75,28 @@ export default function Modal({ isOpen = false, closeModal }) {
                                             and mobile friendly. It is hosted on Vercel.
                                         </p>
                                         <span className="flex sm:gap-2 gap-1.5 text-xs text-white dark:text-black">
-                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-2 py-0.5 rounded-full">
+                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-1 sm:px-2 py-0.5 rounded-full">
                                                 Next JS
                                             </span>
-                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-2 py-0.5 rounded-full">
+                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-1 sm:px-2 py-0.5 rounded-full">
                                                 Typescript
                                             </span>
-                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-2 py-0.5 rounded-full">
+                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-1 sm:px-2 py-0.5 rounded-full">
                                                 Redux
                                             </span>
-                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-2 py-0.5 rounded-full">
+                                            <span className="bg-green-500 dark:bg-[#ffbf2a] px-1 sm:px-2 py-0.5 rounded-full">
                                                 Tailwind CSS
                                             </span>
                                         </span>
                                         <div className="mt-5">
                                             <Link
-                                                className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2 md:text-base text-sm rounded-md font-medium me-4"
+                                                className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2.5 md:text-base text-sm rounded-md font-medium me-4"
                                                 href="/"
                                             >
                                                 Live Preview
                                             </Link>
                                             <Link
-                                                className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2 md:text-base text-sm rounded-md font-medium"
+                                                className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2.5 md:text-base text-sm rounded-md font-medium"
                                                 href="/"
                                             >
                                                 Code On Github
