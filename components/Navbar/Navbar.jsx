@@ -127,9 +127,12 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="flex items-center">
-                    <button className="text-[15px] font-medium text-white  py-2 px-5 dark:bg-[#ffbf2a] bg-green-500 outline-none rounded-full hidden md:block me-3">
+                    <Link
+                        href="#contact-me"
+                        className="text-[15px] font-medium text-white  py-2 px-5 dark:bg-[#ffbf2a] bg-green-500 outline-none rounded-full hidden md:block me-3"
+                    >
                         HIRE ME
-                    </button>
+                    </Link>
                     <span onClick={handleTheme} className="text-base text-white md:px-2 md:me-0 me-2 cursor-pointer">
                         {theme === 'dark' ? (
                             <Icon icon="light" className="md:h-10 md:w-10 h-9 w-9 rounded-full p-1.5 fill-white" />

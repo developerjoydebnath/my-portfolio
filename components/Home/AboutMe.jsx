@@ -2,11 +2,14 @@
 
 import { useLoading } from '@/context/LoadingContext';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 import Heading from '../Heading/Heading';
 
 const AboutMe = () => {
     const { theme } = useLoading();
+    const router = useRouter();
     return (
         <section id="about-me" className={`${theme} `}>
             <div className="py-10">
@@ -33,44 +36,85 @@ const AboutMe = () => {
                                     A frontend web developer
                                 </h3>
                                 <p className="leading-6 dark:text-[#a9adb8] text-slate-500 mb-6 md:text-start text-center">
-                                    I am a Visual Designer with a strong focus on digital branding. Visul design seeks
-                                    to attract, inspire, create desires and otivate people to respond to messages, with
-                                    a view to making a favorable impact.
+                                    I'm a Professional Frontend Web Developer with best experience over 2 years in{' '}
+                                    <span className=" font-medium">
+                                        React JS, Next JS, Redux, RTK Query, Redux Toolkit, HTML5, CSS3, Javascript,
+                                        Typescript, JQuery, Tailwind CSS, Bootstrap CSS .
+                                    </span>{' '}
+                                    I build best quality, user friendly and responsive custom websites.
                                 </p>
                                 <div className="md:block flex justify-center">
                                     <table className="">
                                         <tbody className="dark:text-[#a9adb8] text-slate-500">
                                             <tr>
-                                                <td className="pb-4">Birthday</td>
-                                                <td className="pb-4 ps-5">: May 07, 1990</td>
+                                                <td className="pb-4 sm:text-base text-sm">Date of Birth</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">
+                                                    : November 04, 2000
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4">Phone</td>
-                                                <td className="pb-4 ps-5">: +1 876-369-9009</td>
+                                                <td className="pb-4 sm:text-base text-sm">Phone</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                    <Link href="tel:+8801740036543"> : +880 1740036543</Link>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4">Email</td>
-                                                <td className="pb-4 ps-5">: devis@example.com</td>
+                                                <td className="pb-4 sm:text-base text-sm">Email</td>
+                                                <td
+                                                    onClick={() =>
+                                                        window.open(
+                                                            'mailto:support@example.com?subject=SendMail&body=Description',
+                                                        )
+                                                    }
+                                                    className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black"
+                                                >
+                                                    : developerjoydebnath@gmail.com
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4">From</td>
-                                                <td className="pb-4 ps-5">: 2661 Hich meadow</td>
+                                                <td className="pb-4 sm:text-base text-sm">Linked in</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                    <Link
+                                                        target="_blank"
+                                                        href="https://www.linkedin.com/in/joy-debnath-js/"
+                                                    >
+                                                        {' '}
+                                                        : https://www.linkedin.com/in/joy-debnath-js/
+                                                    </Link>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4">Language</td>
-                                                <td className="pb-4 ps-5">: English, Germanic</td>
+                                                <td className="pb-4 sm:text-base text-sm">Github</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                    <Link target="_blank" href="https://github.com/developerjoydebnath">
+                                                        {' '}
+                                                        : https://github.com/developerjoydebnath
+                                                    </Link>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4">Freelance</td>
-                                                <td className="pb-4 ps-5">: Available</td>
+                                                <td className="pb-4 sm:text-base text-sm">Language</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">
+                                                    : Bangla, English, Hindi
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td className="pb-4 sm:text-base text-sm">Freelance</td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">: Available</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="md:text-start text-center">
-                                    <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5 sm:text-base text-sm">
+                                <div className="md:text-start text-center mt-3">
+                                    <Link
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="cv-joy.pdf"
+                                        download
+                                        className="dark:bg-[#ffbf2a] bg-green-500 text-white px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5 sm:text-base text-sm"
+                                    >
                                         Download CV
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
