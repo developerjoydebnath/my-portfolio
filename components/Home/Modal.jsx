@@ -49,7 +49,7 @@ export default function Modal({ isOpen = false, closeModal }) {
                                         <div className="">
                                             <Image
                                                 src={images[imageNo].img}
-                                                className="w-full h-fit rounded-md"
+                                                className="w-full h-fit max-h-[550px] rounded-md"
                                                 alt="dnd"
                                                 height={600}
                                                 width={1200}
