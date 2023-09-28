@@ -48,7 +48,7 @@ const Backend = () => {
                         <span
                             className={`${
                                 theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
-                            } sm:text-xl text-lg text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
+                            } sm:text-xl text-lg text-slate-600 dark:text-[#c3c6ce] font-bold flex items-center gap-3`}
                         >
                             <Image
                                 src={d.topic === 'Express JS' ? (theme === 'dark' ? d.img : d.img2) : d.img}

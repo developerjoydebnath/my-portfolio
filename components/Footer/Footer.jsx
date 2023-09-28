@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             {/* bg-[#ffbf2a] */}
-            <div className="bg-[#dbdbdb] dark:bg-[#06112e] py-8">
+            <div className="bg-[#d5fdcd] dark:bg-[#06112e] py-8">
                 <ContainerLayout>
                     <div className="sm:flex block justify-between">
                         <div>

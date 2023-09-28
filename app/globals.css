@@ -66,22 +66,16 @@ html{
 }
 
 .neon:hover .js__shadow_2 {
-  box-shadow: 0 0 50px 10px rgba(82, 223, 39, 0.97);
+  box-shadow: 0 0 50px 10px rgba(82, 223, 39, 0.8);
   transition-duration: 200ms;
   background: #22c55e;
   border: #22c55e;
 }
 
-.js__transition{
-  display: flex;
-  width: 45px;
-  height: 45px;
-  justify-content: center;
-  align-items: center;
-  transition: width 500ms ease-in-out;
-  overflow: hidden;
-}
 
-.js__transition:hover{
-  width: 140px;
+.js__glassmorphism{
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 13.5px );
+  -webkit-backdrop-filter: blur( 13.5px );
 }

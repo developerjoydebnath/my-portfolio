@@ -68,7 +68,7 @@ const AboutMe = () => {
                                     </table>
                                 </div>
                                 <div className="md:text-start text-center">
-                                    <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5">
+                                    <button className="dark:bg-[#ffbf2a] bg-green-500 text-white mt-2 px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5 sm:text-base text-sm">
                                         Download CV
                                     </button>
                                 </div>

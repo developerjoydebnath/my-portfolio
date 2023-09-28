@@ -10,6 +10,7 @@ const Navbar = () => {
     const [isSticky, setSticky] = React.useState(false);
     const { loading, setLoading, theme, setTheme } = useLoading();
     const [currentSection, setCurrentSection] = React.useState(null);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -121,7 +122,7 @@ const Navbar = () => {
                                 currentSection === 'contact-me' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
                             }`}
                         >
-                            CONTACT
+                            CONTACT ME
                         </span>
                     </Link>
                 </div>
@@ -136,9 +137,72 @@ const Navbar = () => {
                             <Icon icon="dark" className="md:h-10 md:w-10 h-9 w-9 rounded-full p-1.5 fill-white" />
                         )}
                     </span>
-                    <span>
+                    <span onClick={() => setIsOpen(!isOpen)}>
                         <Icon icon="menu" className="h-6 w-6 fill-white md:hidden" />
                     </span>
+                </div>
+                <div
+                    className={`absolute  rounded-b-xl py-5 -z-10 w-full left-0 transition-all ${
+                        isOpen ? 'top-full' : '-top-56'
+                    } ${isSticky ? 'bg-black/80' : 'bg-transparent'}`}
+                >
+                    <div>
+                        <div className="md:hidden flex flex-col items-center gap-3">
+                            <Link onClick={() => setIsOpen(false)} href="#home">
+                                <span
+                                    className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-5te py-1 px-2 ${
+                                        currentSection === 'home' ? 'text-green-500 dark:text-[#ffbf2a]' : 'text-white'
+                                    }`}
+                                >
+                                    HOME
+                                </span>
+                            </Link>
+                            <Link onClick={() => setIsOpen(false)} href="#about-me">
+                                <span
+                                    className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 ty-1 px-2 ${
+                                        currentSection === 'about-me'
+                                            ? 'text-green-500 dark:text-[#ffbf2a]'
+                                            : 'text-white'
+                                    }`}
+                                >
+                                    ABOUT ME
+                                </span>
+                            </Link>
+                            <Link onClick={() => setIsOpen(false)} href="#skills">
+                                <span
+                                    className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 py-1 px-2 ${
+                                        currentSection === 'skills'
+                                            ? 'text-green-500 dark:text-[#ffbf2a]'
+                                            : 'text-white'
+                                    }`}
+                                >
+                                    SKILLS
+                                </span>
+                            </Link>
+                            <Link onClick={() => setIsOpen(false)} href="#projects">
+                                <span
+                                    className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 ty-1 px-2 ${
+                                        currentSection === 'projects'
+                                            ? 'text-green-500 dark:text-[#ffbf2a]'
+                                            : 'text-white'
+                                    }`}
+                                >
+                                    PROJECTS
+                                </span>
+                            </Link>
+                            <Link onClick={() => setIsOpen(false)} href="#contact-me">
+                                <span
+                                    className={`text-[15px] font-medium dark:hover:text-[#ffbf2a] hover:text-green-500 tex1 px-2 ${
+                                        currentSection === 'contact-me'
+                                            ? 'text-green-500 dark:text-[#ffbf2a]'
+                                            : 'text-white'
+                                    }`}
+                                >
+                                    CONTACT ME
+                                </span>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </ContainerLayout>
         </nav>

@@ -54,7 +54,7 @@ const Frontend = () => {
                         <span
                             className={`${
                                 theme === 'dark' ? 'js__shadow_dark' : 'js__shadow'
-                            } sm:text-xl text-lg text-slate-600 dark:text-[#a9adb8] font-bold flex items-center gap-3`}
+                            } sm:text-xl text-lg text-slate-600 dark:text-[#c3c6ce] font-bold flex items-center gap-3`}
                         >
                             <Image
                                 src={d.topic === 'Next JS' ? (theme === 'dark' ? d.img : d.img2) : d.img}
@@ -65,7 +65,7 @@ const Frontend = () => {
                                 width={60}
                                 height={60}
                             />
-                            <span>{d.topic}</span>{' '}
+                            <span>{d.topic}</span>
                             <span
                                 className={`absolute sm:h-3 sm:w-3 h-2.5 w-2.5 top-2.5 sm:-left-[46px] -left-[33.5px] transition-all duration-200 rounded-full border-2 border-[#ddd] dark:border-[#232935] overflow-hidden dark:bg-[#131313] bg-white ${
                                     theme === 'dark' ? 'js__shadow_2_dark' : 'js__shadow_2'
