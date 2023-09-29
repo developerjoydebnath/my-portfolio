@@ -1,22 +1,19 @@
 'use client';
 import { Icon } from '@/Icon/Icon';
 import { useLoading } from '@/context/LoadingContext';
+import { projectDetails } from '@/utils/projectDetails';
 import { Dialog, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { Fragment } from 'react';
 
-export default function Modal({ isOpen = false, closeModal }) {
+export default function Modal({ isOpen = false, closeModal, selectedProject }) {
     const { theme } = useLoading();
     const [imageNo, setImageNo] = React.useState(0);
-    const images = [
-        { img: '/img/dnd.jpg' },
-        { img: '/img/ecom.jpg' },
-        { img: '/img/dnd.jpg' },
-        { img: '/img/dnd.jpg' },
-        { img: '/img/dnd.jpg' },
-    ];
-    console.log(imageNo);
+
+    const projectDetail = projectDetails.find((p) => p.project === selectedProject);
+    const images = projectDetail.images;
+
     return (
         <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -91,13 +88,15 @@ export default function Modal({ isOpen = false, closeModal }) {
                                         <div className="mt-5">
                                             <Link
                                                 className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2.5 md:text-base text-sm rounded-md font-medium me-4"
-                                                href="/"
+                                                href={projectDetail.liveSiteLink}
+                                                target="_blank"
                                             >
                                                 Live Preview
                                             </Link>
                                             <Link
                                                 className="bg-green-500 text-white dark:text-black dark:bg-[#ffbf2a] px-3 md:px-5 py-2.5 md:text-base text-sm rounded-md font-medium"
-                                                href="/"
+                                                href={projectDetail.repositoryLink}
+                                                target="_blank"
                                             >
                                                 Code On Github
                                             </Link>

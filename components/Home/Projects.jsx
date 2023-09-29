@@ -6,6 +6,7 @@ import Modal from './Modal';
 
 const Projects = () => {
     let [isOpen, setIsOpen] = React.useState(false);
+    const [selectedProject, setSelectedProject] = React.useState('');
 
     function closeModal() {
         setIsOpen(false);
@@ -25,8 +26,8 @@ const Projects = () => {
             img: '/img/ecom.jpg',
         },
         {
-            title: 'Quiz Bee',
-            img: '/img/quiz-bee.jpg',
+            title: 'Book Store',
+            img: '/img/book-store.jpg',
         },
         {
             title: 'Quiz Bee',
@@ -62,7 +63,10 @@ const Projects = () => {
                                                             {d.title}
                                                         </h1>
                                                         <button
-                                                            onClick={() => setIsOpen(true)}
+                                                            onClick={() => {
+                                                                setSelectedProject(d.title);
+                                                                setIsOpen(true);
+                                                            }}
                                                             className="px-3 py-1 mt-3 rounded text-base font-semibold bg-green-500 text-white dark:bg-[#ffbf2a]"
                                                         >
                                                             Details
@@ -77,7 +81,10 @@ const Projects = () => {
                                             {d.title}
                                         </h1>
                                         <button
-                                            onClick={() => setIsOpen(true)}
+                                            onClick={() => {
+                                                setSelectedProject(d.title);
+                                                setIsOpen(true);
+                                            }}
                                             className="md:hidden sm:px-2 sm:py-0.5 mt-1.5 px-2 py-1 rounded sm:text-base text-sm sm:font-normal font-light shadow-md bg-green-500 text-white dark:bg-[#ffbf2a]"
                                         >
                                             Details
@@ -89,7 +96,7 @@ const Projects = () => {
                     </div>
                 </ContainerLayout>
             </div>
-            {isOpen && <Modal isOpen={isOpen} closeModal={closeModal} />}
+            {isOpen && <Modal selectedProject={selectedProject} isOpen={isOpen} closeModal={closeModal} />}
         </section>
     );
 };
