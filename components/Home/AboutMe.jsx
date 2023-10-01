@@ -3,13 +3,13 @@
 import { useLoading } from '@/context/LoadingContext';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { ContainerLayout } from '../ContainerLayout/ContainerLayout';
 import Heading from '../Heading/Heading';
 
 const AboutMe = () => {
     const { theme } = useLoading();
-    const router = useRouter();
+    const width = window.innerWidth;
+    console.log(width);
     return (
         <section id="about-me" className={`${theme} `}>
             <div className="py-10">
@@ -47,60 +47,76 @@ const AboutMe = () => {
                                     <table className="">
                                         <tbody className="dark:text-[#a9adb8] text-slate-500">
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Date of Birth</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">
-                                                    : November 04, 2000
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Birthday</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base">November 04, 2000</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Phone</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                    <Link href="tel:+8801740036543"> +880 1740036543</Link>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Phone</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
-                                                    <Link href="tel:+8801740036543"> : +880 1740036543</Link>
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Email</span> <span>:</span>
                                                 </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Email</td>
                                                 <td
                                                     onClick={() =>
                                                         window.open(
                                                             'mailto:support@example.com?subject=SendMail&body=Description',
                                                         )
                                                     }
-                                                    className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black"
+                                                    className="pb-4 ps-1 text-sm sm:text-base cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black"
                                                 >
-                                                    : developerjoydebnath@gmail.com
+                                                    developerjoydebnath@gmail.com
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Linked in</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Linkedin</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
                                                     <Link
                                                         target="_blank"
                                                         href="https://www.linkedin.com/in/joy-debnath-js/"
                                                     >
                                                         {' '}
-                                                        : https://www.linkedin.com/in/joy-debnath-js/
+                                                        https://www.linkedin.com
+                                                        <br className={`${width < 350 ? 'block' : 'hidden'}`} />
+                                                        /in/joy-debnath-js/
                                                     </Link>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Github</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5 cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Github</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base cursor-pointer dark:hover:text-[#e4e5e7] hover:text-black">
                                                     <Link target="_blank" href="https://github.com/developerjoydebnath">
                                                         {' '}
-                                                        : https://github.com/developerjoydebnath
+                                                        https://github.com/
+                                                        <br className={`${width < 350 ? 'block' : 'hidden'}`} />
+                                                        developerjoydebnath
                                                     </Link>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Language</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">
-                                                    : Bangla, English, Hindi
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between">
+                                                    <span>Language</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base">
+                                                    Bangla, English, Hindi
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td className="pb-4 sm:text-base text-sm">Freelance</td>
-                                                <td className="pb-4 ps-1 text-sm sm:text-base sm:ps-5">: Available</td>
+                                                <td className="pb-4 sm:text-base text-sm flex justify-between gap-2 msm:gap-5">
+                                                    <span>Freelance</span> <span>:</span>
+                                                </td>
+                                                <td className="pb-4 ps-1 text-sm sm:text-base">Available</td>
                                             </tr>
                                         </tbody>
                                     </table>

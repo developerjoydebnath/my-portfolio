@@ -47,7 +47,7 @@ const Projects = () => {
                         <div className="grid grid-cols-12 md:gap-10 gap-y-5 mt-10">
                             {projects.map((d, index) => (
                                 <div key={index} className="lg:col-span-4 msm:col-span-6 col-span-12 rounded-lg">
-                                    <div className="rounded-lg overflow-hidden group shadow-xl border dark:border-black lg:w-full md:w-[350px] msm:w-[300px] sm:w-[420px] w-[320px] mx-auto md:h-[250px] msm:h-[180px] sm:h-[200px] h-[180px]">
+                                    <div className="rounded-lg overflow-hidden group shadow-xl border dark:border-black lg:w-full md:w-[350px] msm:w-[300px] sm:w-[420px] w-[300px] mx-auto md:h-[250px] msm:h-[180px] sm:h-[200px] h-[180px]">
                                         <div className="h-full w-full relative">
                                             <Image
                                                 className="h-full w-full group-hover:scale-110 transition duration-500 ease-in-out"
