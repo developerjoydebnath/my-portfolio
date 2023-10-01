@@ -49,7 +49,7 @@ export const projectDetails = [
     },
     {
         project: 'Job Finder',
-        liveSiteLink: 'https://job-finder-redux-toolkit.vercel.app/',
+        liveSiteLink: 'https://job-finder-bd.netlify.app/',
         repositoryLink: 'https://github.com/developerjoydebnath/job-finder-redux-toolkit',
         images: [
             { img: '/img/dnd.jpg' },
