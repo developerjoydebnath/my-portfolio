@@ -30,12 +30,12 @@ const Projects = () => {
             img: '/img/book-store.jpg',
         },
         {
-            title: 'Quiz Bee',
-            img: '/img/quiz-bee.jpg',
+            title: 'Job Finder',
+            img: '/img/job-finder.jpg',
         },
         {
-            title: 'Quiz Bee',
-            img: '/img/quiz-bee.jpg',
+            title: 'Task Manager',
+            img: '/img/task-manager.jpg',
         },
     ];
     return (

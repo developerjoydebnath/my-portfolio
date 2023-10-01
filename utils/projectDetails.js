@@ -48,9 +48,9 @@ export const projectDetails = [
         ],
     },
     {
-        project: 'Quiz Bee',
-        liveSiteLink: '',
-        repositoryLink: '',
+        project: 'Job Finder',
+        liveSiteLink: 'https://job-finder-redux-toolkit.vercel.app/',
+        repositoryLink: 'https://github.com/developerjoydebnath/job-finder-redux-toolkit',
         images: [
             { img: '/img/dnd.jpg' },
             { img: '/img/ecom.jpg' },
@@ -60,9 +60,9 @@ export const projectDetails = [
         ],
     },
     {
-        project: 'Quiz Bee',
-        liveSiteLink: '',
-        repositoryLink: '',
+        project: 'Task Manager',
+        liveSiteLink: 'https://task-manager-rtk-redux-toolkit-advanced.vercel.app/',
+        repositoryLink: 'https://github.com/developerjoydebnath/task-manager-rtk-redux-toolkit-advanced',
         images: [
             { img: '/img/dnd.jpg' },
             { img: '/img/ecom.jpg' },
