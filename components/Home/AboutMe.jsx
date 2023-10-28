@@ -19,13 +19,22 @@ const AboutMe = () => {
                         <div className="md:col-span-6 col-span-12 flex justify-center items-center">
                             <div className="md:h-[500px] md:w-[400px] sm:h-[400px] sm:w-[310px] h-[350px] w-[280px] overflow-hidden dark:bg-[#ffbf2a] bg-green-500 rounded-full js__animation">
                                 <Image
-                                    src="/img/myself.png"
+                                    src="/img/profile2.png"
+                                    className="h-full w-full"
+                                    width={1000}
+                                    height={1000}
+                                    alt="img"
+                                />
+                            </div>
+                            {/* <div className="md:h-[500px] md:w-[400px] sm:h-[400px] sm:w-[310px] h-[350px] w-[280px] overflow-hidden dark:bg-[#ffbf2a] bg-green-500 rounded-full js__animation">
+                                <Image
+                                    src="/img/profile.png"
                                     className="h-full w-full"
                                     width={300}
                                     height={300}
                                     alt="img"
                                 />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="md:col-span-6 col-span-12">
                             <div className="md:mx-0">
