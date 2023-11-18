@@ -9,27 +9,27 @@ const Stylesheet = () => {
         {
             topic: 'CSS 3',
             img: '/img/css3.png',
-            desc: 'Expert at CSS 3. Already completed around 50 projects with Html 5.',
+            desc: 'Expert in CSS 3. Already completed around 50 projects with Html 5.',
         },
         {
             topic: 'SCSS',
             img: '/img/sass.png',
-            desc: 'Expert at React JS. Already completed around 40 projects in React JS.',
+            desc: 'Intermediate in React JS. Already completed around 20 projects in React JS.',
         },
         {
             topic: 'Bootstrap 5',
             img: '/img/bootstrap.png',
-            desc: 'Intermediate at Next JS. Already completed around 20 projects in Next JS.',
+            desc: 'Expert in Next JS. Already completed around 20 projects in Next JS.',
         },
         {
             topic: 'Tailwind CSS',
             img: '/img/tailwind.png',
-            desc: 'Expert at Redux JS. Already used Redux JS more then 30 projects.',
+            desc: 'Expert in Redux JS. Already used Redux JS more then 40 projects.',
         },
         {
             topic: 'Styled Component',
             img: '/img/styled.png',
-            desc: 'Intermediate at Typescript. Already used Typescript more then 10 projects.',
+            desc: 'Can customize any styled component as needed.',
         },
     ];
 

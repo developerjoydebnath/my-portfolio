@@ -10,18 +10,18 @@ const Frontend = () => {
         {
             topic: 'Html 5',
             img: '/img/html.png',
-            desc: 'Expert at Html 5. Already completed around 50 projects with Html 5.',
+            desc: 'Expert in Html 5. Already completed around 50 projects with Html 5.',
         },
         {
             topic: 'React JS',
             img: '/img/react.png',
-            desc: 'Expert at React JS. Already completed around 40 projects in React JS.',
+            desc: 'Expert in React JS. Already completed around 30 projects in React JS.',
         },
         {
             topic: 'Next JS',
             img: '/img/nextjs.png',
             img2: '/img/nextjs2.png',
-            desc: 'Intermediate at Next JS. Already completed around 20 projects in Next JS.',
+            desc: 'Intermediate in Next JS. Already completed around 10 projects in Next JS.',
         },
         {
             topic: 'Redux JS',
@@ -31,7 +31,7 @@ const Frontend = () => {
         {
             topic: 'Typescript',
             img: '/img/typescript.png',
-            desc: 'Intermediate at Typescript. Already used Typescript more then 10 projects.',
+            desc: 'Beginner to intermediate at Typescript. Already used Typescript more then 5 projects.',
         },
     ];
 

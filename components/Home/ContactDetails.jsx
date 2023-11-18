@@ -17,8 +17,8 @@ const ContactDetails = () => {
                 <div className="mb-5">
                     <h2 className="text-slate-600 dark:text-white lg:text-4xl text-3xl sm:mb-5 mb-3">Get Connected</h2>
                     <p className="text-slate-500 dark:text-[#a9adb8]">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, Lorem ipsum, dolor sit
-                        amet consectetur adipisicing elit. Necessitatibus, molestiae?
+                        Get connected with me for any kind of information. Knock me anytime you need. I'm always here to
+                        solve your problems.
                     </p>
                 </div>
                 <div className="mb-10">

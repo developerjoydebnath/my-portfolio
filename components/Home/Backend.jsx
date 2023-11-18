@@ -9,23 +9,23 @@ const Backend = () => {
         {
             topic: 'Node JS',
             img: '/img/node.png',
-            desc: 'Expert at CSS 3. Already completed around 50 projects with Html 5.',
+            desc: 'Intermediate in Node JS. Already completed around 30 projects with Node JS.',
         },
         {
             topic: 'Express JS',
             img: '/img/ex1.png',
             img2: '/img/ex2.png',
-            desc: 'Expert at React JS. Already completed around 40 projects in React JS.',
+            desc: 'Intermediate in Express JS. Already completed around 30 projects with Express JS',
         },
         {
             topic: 'MongoDB',
             img: '/img/mongodb.png',
-            desc: 'Intermediate at Next JS. Already completed around 20 projects in Next JS.',
+            desc: 'Use MongoDB comfortably and use it as backend in several projects.',
         },
         {
             topic: 'Mongoose',
             img: '/img/mongodb.png',
-            desc: 'Expert at Redux JS. Already used Redux JS more then 30 projects.',
+            desc: 'Intermediate in Mongoose. Use Mongoose with NodeJS and MongoDB.',
         },
     ];
 
