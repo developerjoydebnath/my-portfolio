@@ -134,7 +134,7 @@ const AboutMe = () => {
                                     <Link
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="cv-joy.pdf"
+                                        href="my-developerCV.pdf"
                                         download
                                         className="dark:bg-[#ffbf2a] bg-green-500 text-white px-8 py-3 transition duration-200 font-medium rounded-full hover:-translate-y-0.5 sm:text-base text-sm"
                                     >
