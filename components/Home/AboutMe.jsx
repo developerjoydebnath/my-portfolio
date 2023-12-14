@@ -47,8 +47,8 @@ const AboutMe = () => {
                                 <p className="leading-6 dark:text-[#a9adb8] text-slate-500 mb-6 md:text-start text-center">
                                     I'm a Professional Frontend Web Developer with best experience over 2 years in{' '}
                                     <span className=" font-medium">
-                                        React JS, Next JS, Redux, RTK Query, Redux Toolkit, HTML5, CSS3, Javascript,
-                                        Typescript, JQuery, Tailwind CSS, Bootstrap CSS .
+                                        Javascript, React JS, Next JS, Redux, RTK Query, Redux Toolkit, HTML5, CSS3,
+                                        Typescript, Tailwind CSS, Bootstrap.
                                     </span>{' '}
                                     I build best quality, user friendly and responsive custom websites.
                                 </p>
